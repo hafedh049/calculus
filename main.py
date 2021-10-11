@@ -120,7 +120,7 @@ class ID(QtWidgets.QWidget):
             inputt_string = inputt_string.replace("^","**")
         x = symbols("x")
         if(str(integrate(parse_expr(inputt_string),x)) != f"Integral({inputt_string}, x)"):
-            self.result.setText(str(integrate(parse_expr(inputt_string),x)))
+            self.result.setText(str(integrate(parse_expr(inputt_string),x)) + " c")
         else:
             self.result.setText("Cannot Solve")
 
